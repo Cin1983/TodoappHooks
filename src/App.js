@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import Todoapp from "./Components/Todoapp";
+import Form from "./Components/Form";
+
 
 function App() {
+  const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Hyacinthia's To do App!</h1>
       </header>
+
+      <Calendar />
+      <Form setInputText={setInputText} />
+      <Todoapp />
+   
+   
     </div>
-  );
-}
+  )}
 
 export default App;
