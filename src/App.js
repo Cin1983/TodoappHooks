@@ -10,6 +10,7 @@ import Form from "./Components/Form";
 function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState('all');
 
   // const [value, onChange] = useState(new Date());
 
@@ -40,7 +41,8 @@ function App() {
       todos={todos}
       setTodos={setTodos}
       setInputText={setInputText}
-      />
+      /> 
+
       <Todoapp todos={todos} />
     
     </div>
