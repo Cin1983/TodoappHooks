@@ -2,9 +2,9 @@ import React from "react";
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
   //Javascript and coding section function
-const inputTextHandler = (e) => {
-setInputText(e.target.value);
-};
+  const inputTextHandler = (e) => {
+    setInputText(e.target.value);
+  };
   const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
@@ -14,8 +14,8 @@ setInputText(e.target.value);
     setInputText("");
   };
 
-    const statusHandler = (e) => {
-      setStatus(e.target.value);
+  const statusHandler = (e) => {
+    setStatus(e.target.value);
   };
   return (
     <form>
@@ -37,6 +37,6 @@ setInputText(e.target.value);
       </div>
     </form>
   );
-};
+}
 
 export default Form;

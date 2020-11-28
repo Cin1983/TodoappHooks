@@ -14,7 +14,7 @@ function App() {
   //RUN ONCE with
   useEffect(() => {
     getLocalTodos();
-  }, []);
+  }, [])
   // USE EFFECT
   useEffect(() => {
     filterHandler();
@@ -34,15 +34,17 @@ function App() {
     }
   };
   //Save to Local
-    const saveLocalTodos = () => {localStorage.setitem("todos", JSON.stringify(todos));
-      
-    const getLocalTodos = () => {
-      if (localStorage.getItem("todos") === null) {
-        localStorage.setItem("todos", JSON.stringify([]));
-      } else {
-        let todoLocal = JSON.parse(localStorage.getItem("todos"));
-        setTodos(todoLocal);
-      }
+  // const saveLocalTodos = () => {
+  //   localStorage.setitem("todos", JSON.stringify(todos));
+  // } 
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(localStorage.getItem("todos"));
+      setTodos(todoLocal);
+    }
+  }
       return (
         <div className="App">
           <header>
@@ -65,6 +67,7 @@ function App() {
         </div>
       );
     }
-  }
-}
+  
+
+
   export default App;
