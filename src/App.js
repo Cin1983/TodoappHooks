@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Form from "./Components/Form";
+import TodoList from "./Components/TodoList";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import TodoList from "./Components/TodoList";
-import Form from "./Components/Form";
 
 function App() {
   // state stuff
@@ -35,8 +34,7 @@ function App() {
     }
   };
   //Save to Local
-  const saveLocalTodos = () => {
-    localStorage.setitem("todos", JSON.stringify(todos));
+    const saveLocalTodos = () => {localStorage.setitem("todos", JSON.stringify(todos));
       
     const getLocalTodos = () => {
       if (localStorage.getItem("todos") === null) {
