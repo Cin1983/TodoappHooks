@@ -1,11 +1,10 @@
 import React from "react";
 
 const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
-  //Javascript and coding section
-
-  const inputTextHandler = (e) => {
-    setInputText(e.target.value);
-  };
+  //Javascript and coding section function
+const inputTextHandler = (e) => {
+setInputText(e.target.value);
+};
   const submitTodoHandler = (e) => {
     e.preventDefault();
     setTodos([
@@ -14,9 +13,10 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     ]);
     setInputText("");
   };
-  //   const statusHandler = (e) => {
-  //     console.log(e.target.value);
-  //   };
+
+    const statusHandler = (e) => {
+      setStatus(e.target.value);
+  };
   return (
     <form>
       <input

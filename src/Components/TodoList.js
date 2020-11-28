@@ -1,8 +1,10 @@
 import React from "react";
-// import React from 'react';
 import Todo from "./Todo";
 
-const Todoapp = ({ todos, setTodos, filteredTodos }) => {
+// import React from 'react';
+
+
+const TodoList = ({ todos,  setTodos, filteredTodos }) => {
   return (
     <div className="todo-container">
       <ul className="todo-list">
@@ -20,4 +22,5 @@ const Todoapp = ({ todos, setTodos, filteredTodos }) => {
   );
 };
 
-export default Todoapp;
+export default TodoList;
+
