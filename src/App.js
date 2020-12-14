@@ -52,6 +52,7 @@ function App() {
   // };
 
   const formatDate = (date) => {
+    
     return `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`;
   };
 
@@ -62,29 +63,35 @@ function App() {
 
   const clickHandler = (date) => {
     if (formatDate(date) === formatDate(value)) setIsHidden(!setIsHidden);
+    
   };
+
+
+    
+   
+
 
   return (
     <div className="App">
       <header>
         <h1>Hyacinthia's To do App!</h1>
       </header>
-      <Form
-        inputText={inputText}
-        todos={todos}
-        setTodos={setTodos}
-        setInputText={setInputText}
-        setStatus={setStatus}
-      />
+      
       <TodoList
         todos={todos}
         setTodos={setTodos}
         filteredTodos={filteredTodos}
+        isHidden={isHidden}
+        inputText={inputText}
+        setInputText={setInputText}
+        setStatus={setStatus}
+
       />
 
       <Calendar
         onChange={onChange}
         value={value}
+        
         tileContent={({ date }) => {
           for (let i = 0; i < Dates.length; i++)
             if (

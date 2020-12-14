@@ -1,11 +1,21 @@
 import React from "react";
 import Todo from "./Todo";
+import Form from "./Form";
 
 
 
-const TodoList = ({ todos,  setTodos, filteredTodos }) => {
+const TodoList = ({ todos,  setTodos, filteredTodos, isHidden, inputText, setInputText,setStatus }) => {
   return (
-    <div className="todo-container">
+    <>
+    <Form
+        inputText={inputText}
+        todos={todos}
+        setTodos={setTodos}
+        setInputText={setInputText}
+        setStatus={setStatus}
+      />
+    
+    <div className={`Todo-container${isHidden ? "" : "showing"}`}>
       <ul className="todo-list">
         {filteredTodos.map((todo) => (
           <Todo
@@ -17,7 +27,8 @@ const TodoList = ({ todos,  setTodos, filteredTodos }) => {
           />
         ))}
       </ul>
-    </div>
+      </div>
+      </>
   );
 };
 

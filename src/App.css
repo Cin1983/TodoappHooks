@@ -51,10 +51,15 @@ form button:hover {
   background: #ff6f47;
   color: white;
 }
-.todo-container {
+.Todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  display:none;
+  /* height: 400px; */
+}
+.showing{
+  display:block;
 }
 
 .todo-list {
