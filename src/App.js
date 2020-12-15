@@ -5,10 +5,12 @@ import "react-calendar/dist/Calendar.css";
 import Dates from "./Components/Dates.json";
 import "./App.css";
 
+
 function App() {
   // state stuff
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [value, setValue] = useState(new Date());
@@ -78,8 +80,10 @@ function App() {
         inputText={inputText}
         setInputText={setInputText}
         setStatus={setStatus}
+        
 
       />
+      
       
       <Calendar
         onChange={onChange}
@@ -112,23 +116,3 @@ function App() {
 
 export default App;
 
-//  onChange={onChange}
-//   value={value}
-
-//   tileContent={({ date }) => { for (let i = 0; i < Dates.length; i++) if (`${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}` === Dates[i].date) { return Dates[i].name; } }}
-
-//   tileClassName={({ date }) => { for (let i = 0; i < Dates.length; i++) if (Dates[i].date === `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`) { return "color"; } }}
-
-//  */ }
-
-// onChange={onChange}
-// value={value}
-// tileContent={({ date }) => { for (let i = 0; i < Dates.length; i++) if (`${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}` === Dates[i].date) { return Dates[i].name; } }}
-// tileClassName={({ date }) => { for (let i = 0; i < Dates.length; i++) if (Dates[i].date === `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`) { return "color"; } }}
-
-// import Dates from "./src/Dates.json";
-//
-// tileClassName={({ date }) => {
-//   for (let i = 0; i < Dates.length; i++)
-//   if (`${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}` === Dates[i].date) { return Dates[i].name; } }}
-// tileClassName={({ date }) => {() === Dates[i].date ? ' saturday' : null

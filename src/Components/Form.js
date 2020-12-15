@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
+const Form = ({ setInputText, todos, setTodos, inputText}) => {
   //Javascript and coding section function
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
@@ -16,6 +16,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
   // const statusHandler = (e) => {
   //   setStatus(e.target.value);
+  // setStatus bij const Form later als je deze nog wilt gebruiken
     return (
       <form>
         <input

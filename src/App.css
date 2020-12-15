@@ -1,11 +1,12 @@
 .App {
   text-align: center;
-  padding:150px;
+  padding: 150px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-transform: uppercase;
 
 }
-body{
+
+body {
   box-sizing: border-box;
   background-color: rgb(255, 105, 210);
 }
@@ -31,41 +32,46 @@ form {
   justify-content: center;
   align-items: center;
   margin-left: 200px;
-  
+
 }
+
 form input,
 form button {
-   
+
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
+
 form button {
   color: #ff6f47;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 form button:hover {
   background: #ff6f47;
   color: white;
 }
+
 .Todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  display:none;
+  display: none;
   /* height: 400px; */
-}
-.showing{
-  display:block;
-}
-
-.todo-list {
   min-width: 30%;
   list-style: none;
 }
+
+/* DEZE DOET NIKS HET  */
+.showing {
+  display: block;
+}
+
+.todo-list {}
 
 .todo {
   margin: 0.5rem;
@@ -77,9 +83,11 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
 }
+
 .filter-todo {
   padding: 1rem;
 }
+
 .todo li {
   flex: 1;
 }
@@ -93,9 +101,11 @@ form button:hover {
   cursor: pointer;
   font-size: 1rem;
 }
+
 .complete-btn {
   background: rgb(11, 212, 162);
 }
+
 .todo-item {
   padding: 0rem 0.5rem;
 }
@@ -133,12 +143,14 @@ select {
   position: relative;
   overflow: hidden;
 }
+
 select {
   color: #ff6f47;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
 }
+
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -152,6 +164,6 @@ select {
 }
 
 
-.color{
+.color {
   background-color: red;
 }
