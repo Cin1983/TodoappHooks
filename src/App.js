@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Form from "./Components/Form";
 import TodoList from "./Components/TodoList";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -20,10 +19,10 @@ function App() {
   //   getLocalTodos();
   // }, []);
   // USE EFFECT
-  useEffect(() => {
-    filterHandler();
-  }, [todos, status]);
-  // FUNCTIONS
+  // useEffect(() => {
+  //   filterHandler();
+  // }, [todos, status]);
+  // // FUNCTIONS
 
   const filterHandler = () => {
     switch (status) {
@@ -63,13 +62,7 @@ function App() {
 
   const clickHandler = (date) => {
     if (formatDate(date) === formatDate(value)) setIsHidden(!setIsHidden);
-    
   };
-
-
-    
-   
-
 
   return (
     <div className="App">
@@ -87,7 +80,7 @@ function App() {
         setStatus={setStatus}
 
       />
-
+      
       <Calendar
         onChange={onChange}
         value={value}

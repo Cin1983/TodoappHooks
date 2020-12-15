@@ -4,7 +4,7 @@ import Form from "./Form";
 
 
 
-const TodoList = ({ todos,  setTodos, filteredTodos, isHidden, inputText, setInputText,setStatus }) => {
+const TodoList = ({ todos,  setTodos, filteredTodos, isHidden, inputText, setInputText , setStatus }) => {
   return (
     <>
     <Form
