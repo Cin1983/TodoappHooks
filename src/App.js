@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TodoList from "./Components/TodoList";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -15,7 +15,6 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [value, setValue] = useState(new Date());
   const [isHidden, setIsHidden] = useState(true);
-
   //RUN ONCE with
   // useEffect(() => {
   //   getLocalTodos();
