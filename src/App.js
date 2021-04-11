@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import TodoList from "./Components/TodoList";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -20,9 +20,9 @@ function App() {
   //   getLocalTodos();
   // }, []);
   // USE EFFECT
-  // useEffect(() => {
-  //   filterHandler();
-  // }, [todos, status]);
+  useEffect(() => {
+    filterHandler();
+  }, );
   // // FUNCTIONS
 
   const filterHandler = () => {
