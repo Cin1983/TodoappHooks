@@ -80,10 +80,8 @@ function App() {
         inputText={inputText}
         setInputText={setInputText}
         setStatus={setStatus}
-        
 
       />
-      
       
       <Calendar
         onChange={onChange}
